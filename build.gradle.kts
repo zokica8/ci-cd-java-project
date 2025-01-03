@@ -1,8 +1,16 @@
+
+
 plugins {
     id("java")
 }
 
-group = "org.zoran.numberguesser"
+tasks.withType<Jar> {
+    manifest {
+        attributes["Main-Class"] = "org.example.Main"
+    }
+}
+
+group = "org.example"
 version = "1.0.0"
 
 repositories {
